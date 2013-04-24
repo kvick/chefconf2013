@@ -12,4 +12,15 @@ describe 'myface::default' do
   it "creates a service account for the myface daemon" do
     user("myface").must_exist
   end
+
+  # Verify that MySQL is started and enabled
+  it "Enables and starts the mysql daemon" do
+    service("mysqld").must_be_running
+    service("mysqld").must_be_enabled
+  end
+
+  # Verify that the myface database has a user table
+  it "Seeds the myface database" do
+    myface_tables.must_include "users"
+  end
 end

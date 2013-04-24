@@ -5,9 +5,13 @@
 # Usage
 
 # Attributes
+None (yet)
 
 # Recipes
-
+default.rb
+ - creates myface user
+ - installs MySql service
+ - Creates MySQL schema, seeds schema with test data
 # Author
 
-Author:: YOUR_NAME (<YOUR_EMAIL>)
+Author:: K. Vick (kvick@netflix.com)
